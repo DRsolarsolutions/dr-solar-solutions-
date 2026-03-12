@@ -29,7 +29,6 @@ button{background:#facc15;border:none;padding:10px 15px;cursor:pointer;margin-to
 .review{background:white;padding:20px;margin-bottom:15px;border-radius:8px;}
 .contact{padding:40px;background:#111;color:white;}
 footer{background:black;color:#aaa;text-align:center;padding:20px;}
-/* POPUP */
 .popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;z-index:1000;}
 .popup-content{background:white;padding:20px;border-radius:10px;max-width:500px;width:90%;text-align:center;position:relative;}
 .popup-content img{width:100%;border-radius:8px;}
@@ -64,8 +63,6 @@ footer{background:black;color:#aaa;text-align:center;padding:20px;}
 <div class="category" onclick="filterProducts('all')">All</div>
 <div class="category" onclick="filterProducts('inverter')">Inverters</div>
 <div class="category" onclick="filterProducts('battery')">Batteries</div>
-<div class="category" onclick="filterProducts('panel')">Solar Panels</div>
-<div class="category" onclick="filterProducts('accessory')">Accessories</div>
 </div>
 
 <section id="products" class="products">
@@ -113,14 +110,19 @@ footer{background:black;color:#aaa;text-align:center;padding:20px;}
 <script>
 // ===== PRODUCTS =====
 const products = [
-  {name:"Ecco Solar 3.5kW Inverter", price:4500, category:"inverter", img:"ecco-inverter.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%203.5kW%20Ecco%20Inverter", desc:"High efficiency 3.5kW inverter, pure sine wave, 5-year warranty."},
-  {name:"SolarMax 5kW Inverter", price:6500, category:"inverter", img:"solarmax-inverter.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%205kW%20SolarMax%20Inverter", desc:"Reliable 5kW inverter for residential use, includes MPPT controller."},
-  {name:"365 Energy 200Ah Battery", price:6500, category:"battery", img:"365-battery.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%20365%20200Ah%20Battery", desc:"Deep cycle 200Ah battery, long life and high performance."},
-  {name:"PowerCell 150Ah Battery", price:4800, category:"battery", img:"powercell-battery.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%20150Ah%20PowerCell%20Battery", desc:"Compact 150Ah battery, ideal for small solar setups."},
-  {name:"550W Solar Panel", price:2000, category:"panel", img:"550w-panel.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%20550W%20Solar%20Panel", desc:"High output 550W monocrystalline panel, efficient and durable."},
-  {name:"400W Solar Panel", price:1500, category:"panel", img:"400w-panel.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%20400W%20Solar%20Panel", desc:"Reliable 400W solar panel for residential and commercial use."},
-  {name:"Solar Cable 10m", price:300, category:"accessory", img:"solar-cable.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%2010m%20Solar%20Cable", desc:"10 meter solar cable, weatherproof and durable."},
-  {name:"Solar Mount Kit", price:800, category:"accessory", img:"mount-kit.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%20Solar%20Mount%20Kit", desc:"Complete mounting kit for panels, easy installation."},
+  // ===== Inverters =====
+  {name:"Ecco Solar 3.5kW Inverter", price:4500, category:"inverter", img:"images/inverter1.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%203.5kW%20Ecco%20Inverter", desc:"High efficiency 3.5kW inverter, pure sine wave, 5-year warranty."},
+  {name:"SolarMax 5kW Inverter", price:6500, category:"inverter", img:"images/inverter2.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%205kW%20SolarMax%20Inverter", desc:"Reliable 5kW inverter, includes MPPT controller, perfect for home."},
+  {name:"PowerPro 3kW Inverter", price:4200, category:"inverter", img:"images/inverter3.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%203kW%20PowerPro%20Inverter", desc:"Compact 3kW inverter, stable output, suitable for small systems."},
+  {name:"SunBright 4kW Inverter", price:5900, category:"inverter", img:"images/inverter4.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%204kW%20SunBright%20Inverter", desc:"Efficient 4kW inverter, ideal for residential solar setups."},
+  {name:"EcoVolt 2.5kW Inverter", price:3800, category:"inverter", img:"images/inverter5.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%202.5kW%20EcoVolt%20Inverter", desc:"Small 2.5kW inverter, reliable and cost-effective."},
+
+  // ===== Batteries =====
+  {name:"365 Energy 200Ah Battery", price:6500, category:"battery", img:"images/battery1.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%20365%20200Ah%20Battery", desc:"Deep cycle 200Ah battery, long life and high performance."},
+  {name:"PowerCell 150Ah Battery", price:4800, category:"battery", img:"images/battery2.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%20150Ah%20PowerCell%20Battery", desc:"Compact 150Ah battery, ideal for small solar setups."},
+  {name:"SunPower 250Ah Battery", price:7000, category:"battery", img:"images/battery3.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%20250Ah%20SunPower%20Battery", desc:"250Ah battery with long cycle life, supports heavy loads."},
+  {name:"EcoVolt 100Ah Battery", price:3200, category:"battery", img:"images/battery4.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%20100Ah%20EcoVolt%20Battery", desc:"Reliable 100Ah battery for small solar systems."},
+  {name:"SolarMax 180Ah Battery", price:5500, category:"battery", img:"images/battery5.jpg", whatsapp:"https://wa.me/27848666484?text=Hi%20I%20want%20the%20180Ah%20SolarMax%20Battery", desc:"180Ah deep cycle battery, perfect for medium-size homes."}
 ];
 
 // ===== DISPLAY PRODUCTS =====
