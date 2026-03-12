@@ -1,178 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>D.R Solar Solutions | Solar Spares and Equipment</title>
-<meta name="description" content="D.R Solar Solutions offers reliable solar spares and equipment including solar panels, batteries, and inverters." />
-<meta name="keywords" content="solar panels, solar batteries, solar inverters, solar spares, solar equipment, renewable energy, D.R Solar Solutions" />
-<meta name="author" content="D.R Solar Solutions" />
-<link rel="canonical" href="https://yourusername.github.io/dr-solar-solutions" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D.R Solar Solutions</title>
 
 <style>
 body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#0b0f19;
-color:white;
+  margin:0;
+  font-family:Arial;
+  background:#f4f4f4;
 }
-nav{
-background:black;
-padding:15px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+
+/* HEADER */
+header{
+  background:#111;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20px 40px;
 }
-.logo img{
-height:60px;
+header img{
+  height:95px;
 }
 nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:bold;
 }
-nav a:hover{
-color:#facc15;
-}
+
+/* HERO */
 .hero{
-text-align:center;
-padding:80px 20px;
-background:#020617;
+  background:#0b0f19;
+  color:white;
+  text-align:center;
+  padding:80px 20px;
 }
 .hero h1{
-font-size:40px;
+  color:#facc15;
+  font-size:42px;
 }
-.hero p{
-color:#cbd5e1;
+
+/* SEARCH */
+.search{
+  text-align:center;
+  padding:20px;
+  background:white;
 }
+.search input{
+  width:350px;
+  padding:12px;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+
+/* PRODUCTS */
 .products{
-padding:40px 10%;
-}
-.products h2{
-text-align:center;
-margin-bottom:30px;
+  padding:40px;
 }
 .product-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
 }
 .product{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-text-align:center;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  text-align:center;
 }
 .product img{
-width:100%;
-border-radius:8px;
+  width:100%;
+  border-radius:8px;
+}
+.price{
+  font-size:20px;
+  color:#0a7c2f;
+  font-weight:bold;
 }
 button{
-background:#facc15;
-border:none;
-padding:10px 15px;
-cursor:pointer;
-margin-top:10px;
-font-weight:bold;
+  background:#facc15;
+  border:none;
+  padding:10px 15px;
+  cursor:pointer;
+  margin-top:10px;
+  font-weight:bold;
 }
+
+/* CART */
 .cart{
-background:#020617;
-padding:20px;
-margin:40px 10%;
-border-radius:10px;
+  background:#111;
+  color:white;
+  padding:40px;
 }
 .cart ul{
-list-style:none;
-padding:0;
+  list-style:none;
+  padding:0;
 }
-.gallery{
-padding:40px 10%;
+
+/* REVIEWS */
+.reviews{
+  padding:40px;
+  background:#f4f4f4;
 }
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
+.review{
+  background:white;
+  padding:20px;
+  margin-bottom:15px;
+  border-radius:8px;
 }
-.gallery img{
-width:100%;
-border-radius:10px;
-}
+
+/* CONTACT */
 .contact{
-padding:40px 10%;
-background:#020617;
+  padding:40px;
+  background:#111;
+  color:white;
 }
+
 footer{
-text-align:center;
-padding:20px;
-background:black;
-color:#94a3b8;
+  background:black;
+  color:#aaa;
+  text-align:center;
+  padding:20px;
 }
 </style>
 </head>
 
 <body>
 
+<header>
+<img src="logo.png">
 <nav>
-<div class="logo">
-<img src="logo.png" alt="D.R Solar Solutions Logo">
-</div>
-<div>
-<a href="#">Home</a>
-<a href="#products">Products</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</div>
+  <a href="#">Home</a>
+  <a href="#products">Shop</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
 </nav>
+</header>
 
 <section class="hero">
-<h1>Power Your Home With Solar</h1>
-<p>Solar Spares and Equipment</p>
+<h1>D.R Solar Solutions</h1>
+<p>Solar Panels • Inverters • Batteries • Solar Accessories</p>
 </section>
+
+<div class="search">
+<input type="text" id="search" placeholder="Search solar products..." onkeyup="searchProducts()">
+</div>
 
 <section id="products" class="products">
-<h2>Solar Products</h2>
+<h2>Shop Solar Equipment</h2>
 <div class="product-grid">
+
 <div class="product">
-<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" alt="450W Solar Panel">
-<h3>450W Solar Panel</h3>
-<p>R4500</p>
-<button onclick="addToCart('450W Solar Panel',4500)">Add to Cart</button>
+  <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+  <h3>550W Solar Panel</h3>
+  <p class="price">R3500</p>
+  <button onclick="addToCart('550W Solar Panel',3500)">Add to Cart</button>
 </div>
+
 <div class="product">
-<img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6f" alt="Solar Inverter">
-<h3>Solar Inverter</h3>
-<p>R12000</p>
-<button onclick="addToCart('Solar Inverter',12000)">Add to Cart</button>
+  <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6f">
+  <h3>5kW Hybrid Inverter</h3>
+  <p class="price">R12500</p>
+  <button onclick="addToCart('5kW Hybrid Inverter',12500)">Add to Cart</button>
 </div>
+
 <div class="product">
-<img src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e" alt="Lithium Battery">
-<h3>Lithium Battery</h3>
-<p>R18000</p>
-<button onclick="addToCart('Lithium Battery',18000)">Add to Cart</button>
+  <img src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e">
+  <h3>5kWh Lithium Battery</h3>
+  <p class="price">R18000</p>
+  <button onclick="addToCart('5kWh Lithium Battery',18000)">Add to Cart</button>
 </div>
+
 </div>
 </section>
 
-<div class="cart">
+<section class="cart">
 <h2>Shopping Cart</h2>
 <ul id="cartItems"></ul>
 <h3>Total: R<span id="total">0</span></h3>
 <button onclick="checkout()">Checkout</button>
-</div>
+</section>
 
-<section id="gallery" class="gallery">
-<h2>Our Solar Installations</h2>
-<div class="gallery-grid">
-<img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d" alt="Solar Installation 1">
-<img src="https://images.unsplash.com/photo-1584270354949-1c06b1a6f0c3" alt="Solar Installation 2">
-<img src="https://images.unsplash.com/photo-1611365892117-00cde4d7e2e4" alt="Solar Installation 3">
+<section id="reviews" class="reviews">
+<h2>Customer Reviews</h2>
+<div class="review">
+⭐⭐⭐⭐⭐ Excellent solar equipment and service.
+</div>
+<div class="review">
+⭐⭐⭐⭐⭐ My inverter works perfectly during load shedding.
 </div>
 </section>
 
 <section id="contact" class="contact">
-<h2>Contact Us</h2>
-<p>Email: info@drsolarsolutions.co.za</p>
-<p>Phone: +27 XXX XXX XXXX</p>
+<h2>Contact D.R Solar Solutions</h2>
+<p>Phone: +27 84 866 6484</p>
+<p>Email: d.rsolarsales1@gmail.com</p>
+
+<h3>Bank Payment</h3>
+<p>Bank: FNB</p>
+<p>Account Name: D.R Solar Solutions</p>
+<p>Account Number: 63199939530</p>
 </section>
 
 <footer>
@@ -180,30 +211,42 @@ color:#94a3b8;
 </footer>
 
 <script>
-let cart = []
-let total = 0
-function addToCart(name, price) {
-  cart.push({name, price})
-  total += price
+let cart=[]
+let total=0
+
+function addToCart(name,price){
+  cart.push({name,price})
+  total+=price
   updateCart()
 }
-function updateCart() {
-  let list = document.getElementById("cartItems")
-  list.innerHTML = ""
-  cart.forEach(item => {
-    let li = document.createElement("li")
-    li.textContent = item.name + " - R" + item.price
+
+function updateCart(){
+  let list=document.getElementById("cartItems")
+  list.innerHTML=""
+  cart.forEach(item=>{
+    let li=document.createElement("li")
+    li.textContent=item.name+" - R"+item.price
     list.appendChild(li)
   })
-  document.getElementById("total").innerText = total
+  document.getElementById("total").innerText=total
 }
-function checkout() {
-  let invoice = "DR-" + Math.floor(1000 + Math.random() * 9000)
+
+function checkout(){
+  let invoice="DR-"+Math.floor(1000+Math.random()*9000)
   alert(
-    "Order placed!\n\nInvoice: " + invoice +
-    "\nTotal: R" + total +
-    "\n\nPlease send payment to:\n\nBank: Your Bank\nAccount Name: D.R Solar Solutions\nReference: " + invoice
+    "Order Confirmed!\n\nInvoice: "+invoice+
+    "\nTotal: R"+total+
+    "\n\nSend payment to:\nFNB\nAccount: 63199939530\nReference: "+invoice
   )
+}
+
+function searchProducts(){
+  let input=document.getElementById("search").value.toLowerCase()
+  let products=document.querySelectorAll(".product")
+  products.forEach(p=>{
+    let text=p.innerText.toLowerCase()
+    p.style.display=text.includes(input)?"block":"none"
+  })
 }
 </script>
 
