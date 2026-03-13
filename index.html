@@ -1,223 +1,40 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>D.R Solar Solutions</title>
-
 <style>
-
-body{
-margin:0;
-font-family:Arial;
-background:#f4f4f4;
-}
-
-/* HEADER */
-
-header{
-background:#111;
-color:white;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:20px 40px;
-}
-
-header img{
-height:95px;
-}
-
-nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
-font-weight:bold;
-}
-
-/* HERO */
-
-.hero{
-background:#0b0f19;
-color:white;
-text-align:center;
-padding:80px 20px;
-}
-
-.hero h1{
-color:#facc15;
-font-size:42px;
-}
-
-/* SEARCH */
-
-.search{
-text-align:center;
-padding:20px;
-background:white;
-}
-
-.search input{
-width:350px;
-padding:12px;
-border-radius:5px;
-border:1px solid #ccc;
-}
-
-/* CATEGORY BUTTONS */
-
-.categories{
-display:flex;
-justify-content:center;
-gap:20px;
-padding:30px;
-background:white;
-flex-wrap:wrap;
-}
-
-.category{
-background:#facc15;
-padding:12px 25px;
-border-radius:6px;
-font-weight:bold;
-cursor:pointer;
-}
-
-/* PRODUCTS */
-
-.products{
-padding:40px;
-}
-
-.product-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.product{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-text-align:center;
-}
-
-.product img{
-width:100%;
-border-radius:8px;
-cursor:pointer;
-}
-
-.price{
-font-size:20px;
-color:#0a7c2f;
-font-weight:bold;
-}
-
-button{
-background:#facc15;
-border:none;
-padding:10px 15px;
-cursor:pointer;
-margin-top:10px;
-font-weight:bold;
-}
-
-/* WHATSAPP BUTTON */
-
-.whatsapp{
-background:#25D366;
-color:white;
-display:inline-block;
-padding:10px 15px;
-margin-top:10px;
-text-decoration:none;
-border-radius:5px;
-font-weight:bold;
-}
-
-/* FLOATING WHATSAPP */
-
-.float-whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 5px 10px rgba(0,0,0,0.3);
-}
-
-/* IMAGE POPUP */
-
-.popup{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-justify-content:center;
-align-items:center;
-}
-
-.popup img{
-max-width:80%;
-border-radius:10px;
-}
-
-/* CART */
-
-.cart{
-background:#111;
-color:white;
-padding:40px;
-}
-
-.cart ul{
-list-style:none;
-padding:0;
-}
-
-/* REVIEWS */
-
-.reviews{
-padding:40px;
-background:#f4f4f4;
-}
-
-.review{
-background:white;
-padding:20px;
-margin-bottom:15px;
-border-radius:8px;
-}
-
-/* CONTACT */
-
-.contact{
-padding:40px;
-background:#111;
-color:white;
-}
-
-footer{
-background:black;
-color:#aaa;
-text-align:center;
-padding:20px;
-}
-
+body{margin:0;font-family:Arial;background:#f4f4f4;}
+header{background:#111;color:white;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;}
+header img{height:95px;}
+nav a{color:white;margin-left:20px;text-decoration:none;font-weight:bold;}
+.hero{background:#0b0f19;color:white;text-align:center;padding:80px 20px;}
+.hero h1{color:#facc15;font-size:42px;}
+.search{text-align:center;padding:20px;background:white;}
+.search input{width:350px;padding:12px;border-radius:5px;border:1px solid #ccc;}
+.categories{display:flex;justify-content:center;gap:20px;padding:30px;background:white;flex-wrap:wrap;}
+.category-btn{background:#facc15;padding:20px 30px;border-radius:10px;font-weight:bold;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,0.1);}
+.products{padding:40px;}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.product{background:white;padding:20px;border-radius:10px;box-shadow:0 3px 10px rgba(0,0,0,0.1);text-align:center;}
+.product img{width:100%;border-radius:8px;cursor:pointer;}
+.price{font-size:20px;color:#0a7c2f;font-weight:bold;}
+button{background:#facc15;border:none;padding:10px 15px;cursor:pointer;margin-top:10px;font-weight:bold;}
+.whatsapp{background:#25D366;color:white;display:inline-block;padding:10px 15px;margin-top:10px;text-decoration:none;border-radius:5px;font-weight:bold;}
+.float-whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 20px;border-radius:30px;text-decoration:none;font-weight:bold;box-shadow:0 5px 10px rgba(0,0,0,0.3);}
+.popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;z-index:1000;}
+.popup-content{background:white;padding:20px;border-radius:10px;max-width:500px;width:90%;position:relative;text-align:center;}
+.popup img{max-width:80%;border-radius:10px;}
+.close-popup{position:absolute;top:10px;right:15px;font-size:20px;font-weight:bold;cursor:pointer;}
+.cart{background:#111;color:white;padding:40px;}
+.cart ul{list-style:none;padding:0;}
+.reviews{padding:40px;background:#f4f4f4;}
+.review{background:white;padding:20px;margin-bottom:15px;border-radius:8px;}
+.contact{padding:40px;background:#111;color:white;}
+footer{background:black;color:#aaa;text-align:center;padding:20px;}
 </style>
-
 </head>
-
 <body>
 
 <header>
@@ -235,67 +52,25 @@ padding:20px;
 <p>Solar Panels • Inverters • Batteries • Solar Accessories</p>
 </section>
 
+<!-- Category Folders -->
+<div class="categories">
+<div class="category-btn" onclick="filterProducts('inverter')">Inverters</div>
+<div class="category-btn" onclick="filterProducts('battery')">Batteries</div>
+<div class="category-btn" onclick="filterProducts('panel')">Solar Panels</div>
+<div class="category-btn" onclick="filterProducts('all')">All Products</div>
+</div>
+
+<!-- Search -->
 <div class="search">
 <input type="text" id="search" placeholder="Search solar products..." onkeyup="searchProducts()">
 </div>
 
-<div class="categories">
-<div class="category" onclick="filterProducts('all')">All</div>
-<div class="category" onclick="filterProducts('inverter')">Inverters</div>
-<div class="category" onclick="filterProducts('battery')">Batteries</div>
-<div class="category" onclick="filterProducts('panel')">Solar Panels</div>
-</div>
-
+<!-- Products Grid -->
 <section id="products" class="products">
-
-<div class="product-grid">
-
-<div class="product inverter">
-<img src="ecco-inverter.jpg" onclick="openImage(this.src)">
-<h3>Ecco Solar 3.5kW Inverter</h3>
-<p class="price">R4500</p>
-<button onclick="addToCart('Ecco 3.5kW Inverter',4500)">Add to Cart</button>
-<a class="whatsapp" href="https://wa.me/27848666484?text=Hi%20I%20want%20the%203.5kW%20Ecco%20Inverter">Order on WhatsApp</a>
-</div>
-
-<div class="product battery">
-<img src="365-battery.jpg" onclick="openImage(this.src)">
-<h3>365 Energy 200Ah Battery</h3>
-<p class="price">R6500</p>
-<button onclick="addToCart('365 Energy Battery',6500)">Add to Cart</button>
-<a class="whatsapp" href="https://wa.me/27848666484?text=Hi%20I%20want%20the%20365%20200Ah%20Battery">Order on WhatsApp</a>
-</div>
-
-<div class="product panel">
-<img src="550w-panel.jpg" onclick="openImage(this.src)">
-<h3>550W Solar Panel</h3>
-<p class="price">R2000</p>
-<button onclick="addToCart('550W Solar Panel',2000)">Add to Cart</button>
-<a class="whatsapp" href="https://wa.me/27848666484?text=Hi%20I%20want%20the%20550W%20Solar%20Panel">Order on WhatsApp</a>
-</div>
-
-<div class="product battery">
-<img src="100ah-lifepo4.jpg" onclick="openImage(this.src)">
-<h3>12V 100Ah LiFePO4 Lithium Battery</h3>
-<p class="price">R4200</p>
-<p>1.28kWh Capacity • 3000 Cycles @80% DOD • 24 Month Warranty</p>
-<button onclick="addToCart('12V 100Ah LiFePO4 Battery',4200)">Add to Cart</button>
-<a class="whatsapp" href="https://wa.me/27848666484?text=Hi%20I%20want%20the%2012V%20100Ah%20LiFePO4%20Battery">Order on WhatsApp</a>
-</div>
-
-<div class="product inverter">
-<img src="growatt-3kw.jpg" onclick="openImage(this.src)">
-<h3>Growatt 3kW Solar Inverter</h3>
-<p class="price">R5850</p>
-<p>Pure Sine Wave • Built-in MPPT • 1500W PV Input • 2 Year Warranty</p>
-<button onclick="addToCart('Growatt 3kW Inverter',5850)">Add to Cart</button>
-<a class="whatsapp" href="https://wa.me/27848666484?text=Hi%20I%20want%20the%20Growatt%203kW%20Inverter">Order on WhatsApp</a>
-</div>
-
-</div>
-
+<div class="product-grid" id="productGrid"></div>
 </section>
 
+<!-- Cart -->
 <section class="cart">
 <h2>Shopping Cart</h2>
 <ul id="cartItems"></ul>
@@ -303,12 +78,14 @@ padding:20px;
 <button onclick="checkout()">Checkout via WhatsApp</button>
 </section>
 
+<!-- Reviews -->
 <section id="reviews" class="reviews">
 <h2>Customer Reviews</h2>
 <div class="review">⭐⭐⭐⭐⭐ Excellent solar equipment and service.</div>
 <div class="review">⭐⭐⭐⭐⭐ My inverter works perfectly during load shedding.</div>
 </section>
 
+<!-- Contact -->
 <section id="contact" class="contact">
 <h2>Contact D.R Solar Solutions</h2>
 <p>Phone: +27 84 866 6484</p>
@@ -321,79 +98,85 @@ padding:20px;
 
 <a class="float-whatsapp" href="https://wa.me/27848666484">WhatsApp</a>
 
-<div class="popup" id="popup" onclick="closeImage()">
-<img id="popupImg">
+<!-- Product Details Popup -->
+<div class="popup" id="popup">
+<div class="popup-content">
+<span class="close-popup" onclick="closePopup()">×</span>
+<h2 id="popupName"></h2>
+<img id="popupImg" src="">
+<p id="popupDesc"></p>
+<p class="price" id="popupPrice"></p>
+<a class="whatsapp" id="popupWhatsApp" href="" target="_blank">Order on WhatsApp</a>
+</div>
 </div>
 
 <script>
+// Cart and Invoice
+let cart=[], total=0;
+let invoiceNumber = 1; // starts at INV0001
 
-let cart=[]
-let total=0
+// Products Array
+const products = [
+{name:"Ecco Solar 3.5kW Inverter", category:"inverter", price:4500, description:"", image:"ecco-inverter.jpg"},
+{name:"365 Energy 200Ah Battery", category:"battery", price:6500, description:"", image:"365-battery.jpg"},
+{name:"550W Solar Panel", category:"panel", price:2000, description:"", image:"550w-panel.jpg"},
+{name:"12V 100Ah LiFePO4 Lithium Battery", category:"battery", price:4200, description:"1.28kWh Capacity • 3000 Cycles @80% DOD • 24 Month Warranty", image:"100ah-lifepo4.jpg"},
+{name:"Growatt 3kW Solar Inverter", category:"inverter", price:5850, description:"Pure Sine Wave • Built-in MPPT • 1500W PV Input • 2 Year Warranty", image:"growatt-3kw.jpg"}
+];
 
-function addToCart(name,price){
-cart.push({name,price})
-total+=price
-updateCart()
+// Display Products
+function displayProducts(){
+  const grid=document.getElementById("productGrid");
+  grid.innerHTML="";
+  products.forEach(p=>{
+    const div=document.createElement("div");
+    div.className=`product ${p.category}`;
+    div.innerHTML=`
+      <img src="${p.image}" alt="${p.name}" onclick="openPopup('${p.name}','${p.image}','${p.description}','${p.price}')">
+      <h3>${p.name}</h3>
+      <p class="price">R${p.price}</p>
+      <button onclick="addToCart('${p.name}',${p.price})">Add to Cart</button>
+      <button onclick="openPopup('${p.name}','${p.image}','${p.description}','${p.price}')">View Details</button>
+      <a class="whatsapp" href="https://wa.me/27848666484?text=Hi%20I%20want%20the%20${encodeURIComponent(p.name)}" target="_blank">Order on WhatsApp</a>
+    `;
+    grid.appendChild(div);
+  });
 }
+displayProducts();
 
-function updateCart(){
-let list=document.getElementById("cartItems")
-list.innerHTML=""
-cart.forEach(item=>{
-let li=document.createElement("li")
-li.textContent=item.name+" - R"+item.price
-list.appendChild(li)
-})
-document.getElementById("total").innerText=total
-}
+// Add to Cart
+function addToCart(name,price){cart.push({name,price});total+=price;updateCart();}
+function updateCart(){let list=document.getElementById("cartItems");list.innerHTML="";cart.forEach(item=>{let li=document.createElement("li");li.textContent=item.name+" - R"+item.price;list.appendChild(li);});document.getElementById("total").innerText=total;}
 
+// Checkout with Invoice
 function checkout(){
-
-let message="Hello I want to order:%0A"
-
-cart.forEach(item=>{
-message+=item.name+" - R"+item.price+"%0A"
-})
-
-message+="Total: R"+total
-
-window.open("https://wa.me/27848666484?text="+message)
-
+  let inv = "INV" + invoiceNumber.toString().padStart(4,'0');
+  let message = `Hello, I want to order (Invoice: ${inv}):%0A`;
+  cart.forEach(item=>{
+    message += `${item.name} - R${item.price}%0A`;
+  });
+  message += `Total: R${total}`;
+  window.open("https://wa.me/27848666484?text="+message);
+  invoiceNumber++;
+  cart = [];
+  total = 0;
+  updateCart();
 }
 
-function searchProducts(){
-let input=document.getElementById("search").value.toLowerCase()
-let products=document.querySelectorAll(".product")
+// Search & Filter
+function searchProducts(){const input=document.getElementById("search").value.toLowerCase();document.querySelectorAll(".product").forEach(p=>{const text=p.innerText.toLowerCase();p.style.display=text.includes(input)?"block":"none";});}
+function filterProducts(type){document.querySelectorAll(".product").forEach(p=>{p.style.display=(type==="all"||p.classList.contains(type))?"block":"none";});}
 
-products.forEach(p=>{
-let text=p.innerText.toLowerCase()
-p.style.display=text.includes(input)?"block":"none"
-})
+// Popup
+function openPopup(name,img,desc,price){
+  document.getElementById("popupName").innerText=name;
+  document.getElementById("popupImg").src=img;
+  document.getElementById("popupDesc").innerText=desc;
+  document.getElementById("popupPrice").innerText="R"+price;
+  document.getElementById("popupWhatsApp").href="https://wa.me/27848666484?text=Hi I want the "+encodeURIComponent(name);
+  document.getElementById("popup").style.display="flex";
 }
-
-function filterProducts(type){
-
-let products=document.querySelectorAll(".product")
-
-products.forEach(p=>{
-if(type=="all"){
-p.style.display="block"
-}else{
-p.style.display=p.classList.contains(type)?"block":"none"
-}
-})
-
-}
-
-function openImage(src){
-document.getElementById("popup").style.display="flex"
-document.getElementById("popupImg").src=src
-}
-
-function closeImage(){
-document.getElementById("popup").style.display="none"
-}
-
+function closePopup(){document.getElementById("popup").style.display="none";}
 </script>
 
 </body>
